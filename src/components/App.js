@@ -144,7 +144,7 @@ function App()
 	// Do not alter/remove main div
 	return (
 	<div id="main">
-		 <Select name="#state" options = {states}/>
+		 
 		 <Select name="#city" options = {states.name} />
 		 <Select name="#landmark" options = {states.name} />
 	</div>
