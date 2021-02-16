@@ -1,6 +1,7 @@
 import React, { useState,useReducer } from "react";
 import "./../styles/App.css";
-
+import { Button } from 'react-bootstrap';
+import Select from 'react-select';
 
 const states = [{
 	name : "Madhya Pradesh",
@@ -143,7 +144,9 @@ function App()
 	// Do not alter/remove main div
 	return (
 	<div id="main">
-		
+		 <Select name="#state" options = {states}/>
+		 <Select name="#city" options = {states.name} />
+		 <Select name="#landmark" options = {states.name} />
 	</div>
 	);
 }
