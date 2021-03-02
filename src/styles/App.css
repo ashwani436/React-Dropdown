@@ -14,7 +14,7 @@ button{
 .bg-pink{
 	background-color:pink;
 }
-#inner{
+#state-name{
   min-height: 60px;
   min-width: 10px;
   border: 2px solid black;
