@@ -1,7 +1,7 @@
 import React, { useState,useReducer } from "react";
 import "./../styles/App.css";
-import { Button } from 'react-bootstrap';
-import Select from 'react-select';
+import Container from "./Container"
+
 
 const states = [{
 	name : "Madhya Pradesh",
@@ -139,37 +139,12 @@ const states = [{
 }];
 
 
-const App=()=>{
-const[state,updated]=useState((states[0].name+" "+states[0].description));
-
-const optionItems=states.map((num)=>
-		 <option>{num.name}</option>
-	);
-
-    const handle=(event)=>{
-		const e=event.target.value;
-		if(e==="Madhya Pradesh"){
-			updated(states[0].name+" "+states[0].description)
-		}
-		if(e==="Jharkhand"){
-			updated(states[1].name+" "+states[1].description)
-		}
-		if(e==="Assam"){
-			updated(states[2].name+" "+states[2].description)
-		}
-		if(e==="Bihar"){
-			updated(states[3].name+" "+states[3].description)
-		}}
-
-	
-	return(
+function App() 
+{
+	// Do not alter/remove main div
+	return (
 	<div id="main">
-		 <p>States:<select onChange={handle}>{optionItems}</select></p>
-		 <div id="state-name">{state}</div>
-		 <p>City:<select onChange={handle}>{optionItems}</select></p><br/>
-		 <p>Town:<select>{optionItems}</select></p><br/>
-		
-		
+	<Container states={states}/>
 	</div>
 	);
 }

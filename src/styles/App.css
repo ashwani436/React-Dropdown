@@ -14,9 +14,17 @@ button{
 .bg-pink{
 	background-color:pink;
 }
-#state-name{
-  min-height: 60px;
-  min-width: 10px;
-  border: 2px solid black;
- 
+
+.container {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+}
+
+.title{
+    margin: 4rem;
+    color: brown;
+    font-size: larger;
+
 }
